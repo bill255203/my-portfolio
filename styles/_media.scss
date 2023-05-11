@@ -1,4 +1,4 @@
-@media screen and(max-width:600px) {
+@media screen and (max-width: 600px) {
   .about-container {
     grid-template-columns: 1fr;
     .right-about {
@@ -12,9 +12,12 @@
       }
     }
   }
-  .portfolios {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
+  //make the portfolio items stack on top of each other
+  .portfolio {
+    .portfolios {
+      grid-template-columns: 1fr;
+      padding-bottom: 6rem;
+    }
   }
   .main-title {
     h2 {
@@ -31,7 +34,7 @@
     padding: 2rem 2.5rem !important;
   }
 }
-@media screen and(max-width:1432px) {
+@media screen and (max-width: 1432px) {
   header {
     padding: 0 !important;
   }
@@ -53,7 +56,7 @@
     margin-top: 1.5rem;
   }
 }
-@media screen and(max-width:1070px) {
+@media screen and (max-width: 1070px) {
   .about-container {
     grid-template-columns: 1fr;
     .right-about {
@@ -72,7 +75,7 @@
     }
   }
 }
-@media screen and(max-width:970px) {
+@media screen and (max-width: 970px) {
   .section {
     padding: 7rem 6rem;
   }
@@ -117,6 +120,17 @@
     background-color: var(--color-grey-5);
     .control {
       margin: 0.6rem 2rem !important;
+    }
+  }
+  .portfolio {
+    .portfolios {
+      //make items inside center horizontally
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
     }
   }
 }
